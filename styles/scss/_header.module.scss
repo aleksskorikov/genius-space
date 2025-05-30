@@ -1,0 +1,104 @@
+@use './changeable' as *;
+@use "./templates" as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 10px;
+    font-size: $fzDefault;
+    
+    &__logo {        
+        width: 96px;
+        height: 40px;
+    }
+
+    &__format{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 30px 6px 30px;
+        margin-left: 40px;
+        background: linear-gradient(88.87deg, $colorSpan 0%, rgba(201, 234, 50, 0) 212.16%);
+        border-radius: 4px;
+        line-height: 148%;
+        color: $colorTextDark;
+        font-weight: 800;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__info-lists {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    &__info-date {
+        @extend %headerInfo;
+        &::before {
+            content: "";
+            background: url('../../images/calendar-icon.svg') no-repeat center center;
+            @extend %headerInfoBefore;
+        }
+
+    }
+
+    &__info-time {
+        @extend %headerInfo;
+        &::before{
+            content: "";
+            background: url('../../images/time-icon.svg') no-repeat center center;
+            @extend %headerInfoBefore;
+        }
+    }
+}
+
+
+@media (max-width: 1260px) {
+    .header {
+        flex-wrap: wrap;
+        padding: 35px 10px 5px 35px;
+
+        &__format {
+            margin: 80px auto 0;
+        }
+
+        &__info {
+            order: 3;
+        }
+
+        &__info-lists {
+            order: 2;
+        }
+    }
+}
+
+@media (max-width: 760px){
+    .header {
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 35px 10px 5px 35px;
+
+        &__format {
+            margin: 50px auto 0;
+            font-size: $fzTextAdaptivMini;
+            padding: 6px 20px 6px 20px;
+        }
+
+        &__info {
+            order: 3;
+        }
+
+        &__info-lists {
+            order: 2;
+            margin-top: 70px;
+            font-size: $fzTextAdaptivMini;
+        }
+    }
+}

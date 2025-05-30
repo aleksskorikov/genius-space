@@ -1,0 +1,47 @@
+@use './changeable' as *;
+@use "./templates" as *;
+
+
+.logos{
+    margin: 150px 0;
+}
+
+.section-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-size: $titleh3;
+    font-weight: 800;
+}
+
+.logos-slider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logos-slider__slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 172px !important;
+    height: 90px !important;
+    margin-right: 15px;
+    border-radius: 5.44433px;
+    padding: 25px;
+    background-color: #3B1325 !important;
+}
+
+.logos__item img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 760px) {
+    .section-title {
+        font-size: $fzTextAdaptivL; 
+    }
+}

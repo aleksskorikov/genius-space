@@ -1,0 +1,43 @@
+@use './changeable' as *;
+
+%headerInfo{
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    font-weight: 700;
+}
+
+%headerInfoBefore{
+    margin-right: 12px;
+    width: 19px;
+    height: 19px;
+    background-size: contain;
+}
+
+%button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: $colorSpan;
+    transition: 0.3s ease;
+    font-size: $fzM;
+    font-weight: 800;
+    color: $colorTextDark;
+    &:hover {
+        box-shadow: 2px 3px 11px $colorSpan;
+    }
+}
+
+
+%itemBgBefore{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    height: 408px;
+    border-radius: 50%;
+    filter: blur(100px);
+}
+

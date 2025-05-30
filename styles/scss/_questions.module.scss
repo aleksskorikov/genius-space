@@ -1,0 +1,118 @@
+@use './changeable' as *;
+@use "./templates" as *;
+
+.questions {
+    &__title-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 122px 87px 100px;
+        background: $formBg;
+        border-radius: 20px;
+        background-image: url("../../images/bg-img.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right 0px top -10px;
+    }
+}
+
+.questions-title{
+    text-align: start;
+    font-size: $titleh2;
+    font-weight: 800;
+    line-height: 110%;
+    margin-bottom: 23px;
+    span{
+        color: $colorSpan;
+    }
+}
+
+.questions {
+    &__text {
+        max-width: 450px;
+        font-size:$fzL;
+        line-height: 100%;
+    }
+}
+
+.questions{
+    &__button {
+        position: relative;
+        height: 64px;
+        width: 257px;
+        margin: 43px 0;
+        @extend %button;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 637px;
+            height: 637px;
+            background: radial-gradient(50% 50% at 50% 50%, rgba(200, 233, 49, 0.4) 0%, rgba(53, 67, 29, 0) 100%);
+            filter: blur(100px);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+    }
+}
+
+@media (max-width: 1260px) {
+    .questions {   
+        &__title-block {
+            padding: 40px 30px 20px;
+        }   
+    }
+
+    .questions-title {
+        font-size: $titleh4;
+        margin-bottom: 23px; 
+    }
+
+    .questions {
+        &__text {
+            max-width: 300px;
+            font-size: $fzTextAdaptiv;
+        }   
+    }
+}
+
+@media (max-width: 760px) {
+    .questions {
+        display: flex;
+        flex-direction: column;
+        max-width: 360px;
+        &__title-block {
+            position: relative; 
+            align-items: center;
+            padding: 10px;
+            z-index: 1; 
+            background-image: none;
+            margin-top: 250px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -250px; 
+                left: 15%; 
+                width: 250px;
+                height: 250px;
+                background-image: url("../../images/bg-img.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                z-index: -1; 
+                pointer-events: none; 
+            }
+            }
+        &__text {
+            text-align: center;
+            font-size: $fzDefault;
+            line-height: 100%;  
+        } 
+    }
+    .questions-title {
+        text-align: center;
+        font-size: $fzL;
+    }
+}

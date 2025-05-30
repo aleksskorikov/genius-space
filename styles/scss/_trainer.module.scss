@@ -1,0 +1,200 @@
+@use './changeable' as *;
+@use "./templates" as *;
+
+.trainer {
+    position: relative;
+    margin: 50px 0;
+
+    &__title{
+        text-align: center;
+        font-size: $titleh3;
+        font-weight: 800;
+        span{
+            color: $colorSpan;
+        }
+    }
+
+    &__block {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 752px;
+        margin: 62px auto 0;
+    }
+
+    &__block-images {
+        width: 345px;
+        height: 345px;
+        border-radius: 50%;
+        border: 18px solid $itemColorBorder;
+    }
+
+    &__block-img {
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    &__block-data {
+        max-width: 376px;
+        padding-top: 30px;
+    }
+
+    &__decor1 {
+        position: absolute;
+        top: 57%;
+        left: 4%;
+        transform: translateY(-50%);
+        z-index: 1;
+        width: 435px;
+        height: 420px;
+        background-image: url(../../images/speaker__decor1.svg);
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-45%, -55%);
+            width: 178%;
+            height: 185%;
+            border-radius: 50%;
+            background: radial-gradient(50% 50% at 50% 50%, rgba(219, 56, 87, 0.4) 0%, rgba(219, 56, 87, 0) 100%);
+            filter: blur(100px);
+        }
+    }
+
+    &__decor2 {
+        position: absolute;
+        top: 57%;
+        right: -7%;
+        transform: translateY(-50%);
+        z-index: 1;
+        width: 435px;
+        height: 420px;
+        background-image: url(../../images/speaker__decor2.svg);
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-43%, -51%);
+            width: 190%;
+            height: 153%;
+            border-radius: 50%;
+            background: radial-gradient(50% 50% at 50% 50%, rgba(200, 233, 49, 0.4) 0%, rgba(53, 67, 29, 0) 100%);
+            filter: blur(100px);
+        }
+    }
+}
+
+.block {
+    &__data-name {
+        font-size: $fzDataName;
+        line-height: 140%;
+        font-weight: 700;
+    }
+
+    &__data-experience {
+        margin-bottom: 32px;
+        font-size: $fzDataExperience;
+        line-height: 140%;
+    }
+
+    &__data-achievements {
+        margin-bottom: 32px;
+        font-size: $fzDataExperience;
+        line-height: 140%;
+    }
+
+    &__data-item {
+        position: relative;
+        padding-left: 26px;
+        font-size: $fzM;
+        line-height: 140%;
+        font-weight: 500;
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+        &::before{
+            content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%); 
+                width: 14px;
+                height: 14px;
+                background: url("../../images/iconRunningLine.svg") no-repeat center center;
+                background-size:contain;
+        }
+    }
+}
+
+@media (max-width: 1260px) {
+    .trainer {   
+        &__decor2 {
+            position: absolute;
+            top: 80%;
+            right: 8%;
+            width: 180px;
+            height: 240px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }  
+        
+    }
+}
+
+@media (max-width: 760px) {
+    .trainer {
+        &__title {
+            font-size: $fzTextAdaptivL;
+        }
+        &__block { 
+            flex-direction: column; 
+            align-items: center; 
+        }
+        &__block-images {
+            width: 260px;
+            height: 260px;
+            border: 8px solid $itemColorBorder;
+        }
+        &__block-data {
+            text-align: center; 
+            padding-top: 5px;
+            max-width: 330px; 
+        }
+                &__decor1 {
+                    left: 13%;
+                    top: 30px;
+                    width: 176px;
+                    height: 181px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+        
+                &__decor2 {
+                    top: 87%;
+                    right:15%;
+                    width: 136px;
+                    height: 152px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;  
+                }
+    }
+    .block {
+        
+        &__data-name {
+            font-size: $fzTextAdaptivL;
+        }
+        &__data-item {
+            font-size: $fzTextAdaptivMini;
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+        }  
+    }
+}

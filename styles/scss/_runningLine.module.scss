@@ -1,0 +1,44 @@
+@use './changeable' as *;
+@use "./templates" as *;
+
+.running {
+
+    &__line {
+        margin: 150px 0;
+    }
+
+    &__line-item {
+        display: flex !important;
+        align-items: center;
+        font-size: 70px;
+        line-height: 105%;
+        letter-spacing: 0.02em;
+        -webkit-text-stroke: 1px $colorSpan;
+        -webkit-text-fill-color: $colobg;
+        font-weight: 1000;
+        white-space: nowrap;
+        &::before{
+            content: "";
+            display: inline-block;
+            margin: 0 30px;
+            width: 39px;
+            height: 37px;
+            background: url("../../images/iconRunningLine.svg") no-repeat center center;
+        }
+    }
+}
+@media (max-width: 1260px) {
+    .running{
+        &__line-item {
+            font-size: $fzTextAdaptivXXXL;  
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .running {
+        &__line {
+            margin: 80px 0 0 0;
+        }
+    }
+}
