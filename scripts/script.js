@@ -50,6 +50,14 @@ newDate.setDate(newDate.getDate() + 1);
         console.warn('Форма содержит ошибки');
         form.find('input.error').first().focus();
     }
-});
+    });
+
+$('.scroll-to-form').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $('.hero-form').offset().top
+    }, 800); 
+    });
+
 
 

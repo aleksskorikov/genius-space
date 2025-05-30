@@ -839,7 +839,7 @@ input.phone {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 150px 10px;
+  padding: 100px 10px 0;
 }
 .answers__title-block {
   max-width: 55%;
@@ -972,7 +972,7 @@ input.phone {
 .footer {
   background: rgba(255, 255, 255, 0.05);
   padding: 35px 10px 0;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 .footer__top {
   display: flex;
