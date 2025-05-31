@@ -2,6 +2,7 @@
 @use "./templates" as *;
 
 .hero {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,7 +35,21 @@
         border-radius: 20px;
         overflow: hidden;
     }
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translate(-70%, 45%);
+        width: 550px;
+        height: 550px;
+        border-radius: 50%;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(219, 56, 87, 0.4) 0%, rgba(219, 56, 87, 0) 100%);
+        filter: blur(100px);
+        z-index: 0;
+    }    
 }
+
 
 .form {
 
@@ -110,8 +125,12 @@
     }
 
     &__text {
-        font-size: $fzDefault;
+        font-size: $fzM;
         font-weight: 500;
+        padding: 0 10px;
+        span{
+            font-weight: 700;
+        }
     }
 
 .form-field {
@@ -261,10 +280,14 @@ input.phone {
 
         &__text {
             text-align: center;
-            font-size: $fzTextAdaptivMini;
+            font-size: $fzM;
             font-weight: 500; 
             line-height: 120%;
             margin-top: 14px;
+            padding: 0 20px;
+        }
+        &__icon {
+            margin-right: 0;  
         }
     }
     .hero-form {

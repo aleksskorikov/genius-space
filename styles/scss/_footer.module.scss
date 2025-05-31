@@ -9,7 +9,7 @@
     &__top {
         display: flex;
         justify-content: space-between;
-        border-bottom: 2px solid gray;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);;
         padding-bottom: 50px;
     }
 
@@ -48,6 +48,13 @@
         }
     }
 
+    &__general-text{
+        font-size: $fzDataExperience;
+        text-transform: uppercase;
+        max-width: 210px;
+        margin-bottom: 20px;
+    }
+
     &__general-networks {
         display: flex;
         gap: 20px;
@@ -60,6 +67,7 @@
         a{
             font-size: $fzFooterLinck;
             color: $colorText;
+            margin-left: 5px;
             &:hover {
                 text-decoration: underline;
             }
@@ -109,9 +117,6 @@
 
 @media (max-width: 1260px) {
     .footer {
-        .container{
-            max-width: 700px;
-        }
         &__top {
             flex-wrap: wrap;
         }
@@ -128,6 +133,9 @@
             font-size: $fzDataExperience; 
             font-weight: 400;
         }
+    }
+    .container{
+        max-width: 700px;
     }
 }
 
@@ -161,6 +169,13 @@
             flex-direction: column;
             align-items: center;
         }
+    .top{
+        &__general-text {
+            text-align: center;
+            line-height: 110%;   
+        }
+    }
+        
 
         .about {
             &__title-lists-left {
@@ -168,6 +183,9 @@
                 flex-direction: column;
                 align-items: center;
                 columns: 1;
+            }
+            &__title {
+                font-size: $fzDefault;       
             }
         }
         .top__contacts-lists{
@@ -180,5 +198,13 @@
             flex-direction: column;
             align-items: center;
         }
+        .contacts {
+            &__title {
+                display: none;
+            }      
+        }
+    }
+    .container {
+        max-width: 380px;
     }
 }

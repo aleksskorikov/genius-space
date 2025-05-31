@@ -40,8 +40,17 @@
     transition: transform 0.3s ease;
 }
 
+@media (max-width: 1260px) {
+    .logos {
+        margin: 100px 0;
+    }
+}
+
 @media (max-width: 760px) {
     .section-title {
         font-size: $fzTextAdaptivL; 
+    }
+    .logos {
+        margin: 80px 0;   
     }
 }

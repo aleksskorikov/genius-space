@@ -74,6 +74,7 @@
         }
 
         &__info-lists {
+            width: auto;
             order: 2;
         }
     }
@@ -81,7 +82,6 @@
 
 @media (max-width: 760px){
     .header {
-        flex-wrap: wrap;
         flex-direction: column;
         padding: 35px 10px 5px 35px;
 
@@ -96,6 +96,8 @@
         }
 
         &__info-lists {
+            justify-content: space-between;
+            gap: 12px;
             order: 2;
             margin-top: 70px;
             font-size: $fzTextAdaptivMini;
