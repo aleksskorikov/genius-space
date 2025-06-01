@@ -6,7 +6,7 @@ newDate.setDate(newDate.getDate() + 1);
     ];
     $('#current-date').text(`${newDate.getDate()} ${month[newDate.getMonth()]}`);
 
-    function validateFormFields(form) {
+function validateFormFields(form) {
     let isValid = true;
 
     const name = form.find('input[name="name"]');
@@ -38,9 +38,9 @@ newDate.setDate(newDate.getDate() + 1);
     }
 
     return isValid;
-    }
+}
 
-    $('.hero-form').on('submit', function (e) {
+$('.hero-form').on('submit', function (e) {
     e.preventDefault();
     const form = $(this);
     const valid = validateFormFields(form);
@@ -50,14 +50,56 @@ newDate.setDate(newDate.getDate() + 1);
         console.warn('Форма содержит ошибки');
         form.find('input.error').first().focus();
     }
+});
+
+const phoneInputs = document.querySelectorAll(".hero-form__input");
+
+phoneInputs.forEach((input) => {
+    const wrapper = input.closest('.form-field');
+    const placeholder = wrapper.querySelector('.placeholder');
+    const countryCode = wrapper.querySelector('.country-code');
+
+    input.addEventListener('focus', () => {
+        placeholder.classList.add('active');
     });
 
-$('.scroll-to-form').on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $('.hero-form').offset().top
-    }, 800); 
+    input.addEventListener('blur', () => {
+        if (!input.value) {
+        placeholder.classList.remove('active');
+        }
     });
+
+    if (input.type === 'tel') {
+        const iti = window.intlTelInput(input, {
+        initialCountry: "ua",
+        separateDialCode: true,
+        geoIpLookup: function (success) {
+            fetch('https://ipapi.co/json')
+            .then((res) => res.json())
+            .then((data) => success(data.country_code))
+            .catch(() => success('us'));
+        },
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+        autoPlaceholder: "off"
+        });
+
+        function updateCountryCode() {
+        const countryData = iti.getSelectedCountryData();
+        if (countryCode) {
+            countryCode.textContent = `+${countryData.dialCode}`;
+        }
+        }
+
+        input.addEventListener('countrychange', updateCountryCode);
+        iti.promise.then(updateCountryCode).catch(updateCountryCode);
+    }
+});
+
+
+
+
+
+
 
 
 

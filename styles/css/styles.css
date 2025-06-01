@@ -273,73 +273,43 @@
 }
 .hero-form .form-field .placeholder {
   position: absolute;
+  display: flex;
+  gap: 5px;
   top: 50%;
   left: 27px;
   color: #808080;
   font-size: 14px;
   line-height: 1;
-  pointer-events: none;
   transition: all 0.2s ease;
   transform: translateY(-50%);
+  margin-left: 15px;
 }
-.hero-form .form-field .placeholder img {
-  width: 20px;
-  height: 15px;
-}
-.hero-form .form-field .hero-form__input:not(:-moz-placeholder-shown) + .placeholder {
-  top: 15px;
+.hero-form .form-field .placeholder.active {
+  top: 8px;
   left: 27px;
   font-size: 11px;
+  transform: translateY(0);
   color: #808080;
 }
-.hero-form .form-field .hero-form__input:focus + .placeholder,
-.hero-form .form-field .hero-form__input:not(:placeholder-shown) + .placeholder {
-  top: 15px;
-  left: 27px;
-  font-size: 11px;
-  color: #808080;
+.hero-form .form-field .placeholder--phone {
+  left: 70px;
+}
+.hero-form .form-field .iti {
+  width: 100%;
+}
+.hero-form .form-field .iti ul {
+  width: 350px;
+  max-height: 150px;
+  overflow-x: hidden;
+  background-color: rgb(194, 192, 192);
+  border-radius: 15px;
+  color: rgb(47, 46, 46);
 }
 .hero-form__button {
   height: 64px;
   width: 257px;
   margin: 30px auto 0;
-  z-index: 10;
-}
-
-input.phone {
-  padding-left: 65px !important;
-  font-size: 16px;
-  height: 40px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-.hero-form__input + .placeholder {
-  position: absolute;
-  left: 12px;
-  top: 12px;
-  color: #aaa;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-
-.hero-form__input:not(:-moz-placeholder-shown) + .placeholder {
-  top: -8px;
-  left: 10px;
-  font-size: 12px;
-  color: #555;
-  padding: 0 4px;
-}
-
-.hero-form__input:focus + .placeholder,
-.hero-form__input:not(:placeholder-shown) + .placeholder {
-  top: -8px;
-  left: 10px;
-  font-size: 12px;
-  color: #555;
-  padding: 0 4px;
+  z-index: 5;
 }
 
 @media (max-width: 1260px) {

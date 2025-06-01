@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="./styles/css/resets.css">
     <link rel="stylesheet" href="./styles/css/styles.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./scripts/libs.min.js"></script>
     <script src="./scripts/script.js" defer></script>
@@ -16,13 +19,13 @@
 <body>
     <header class="header container">
         <div class="header__logo">
-            <a href="" class="header__logo-linck">
-                <img src="./images/header__logo.svg" alt="" class="header__logo-img">
+            <a href="#" class="header__logo-linck">
+                <img src="./images/header__logo.svg" alt="logo Genius Space" class="header__logo-img">
             </a>
         </div>
         <div class="header__info">
             <div class="header__format">
-                <img class="header__format-img" src="./images/icon.svg" alt="">
+                <img class="header__format-img" src="./images/icon.svg" alt="image of a four-pointed star">
                 Безкоштовний майстер-клас
             </div>
         </div>    
@@ -40,35 +43,33 @@
             </div>
             <div class="hero__form">
                 <div class="form__decor1" >
-                    <img src="./images/form__decor2.svg" alt="">
+                    <img src="./images/form__decor2.svg" alt="igure with abstract decorative element">
                 </div>
                 <form class="hero-form">
                     <h2 class="hero-form__title">Залиште заявку <br> <span>на майстер-клас</span>
                     </h2>
                     <div class="hero-form__gift">
                         <div class="hero-form__icon">
-                            <img src="./images/form__gift.png" alt="" class="hero-form__img">
+                            <img src="./images/form__gift.png" alt="gift box image with bow" class="hero-form__img">
                         </div>
                         <p class="hero-form__text">та додаткових робочих матеріалів <span>прямо зараз</span></p>
                     </div>
                     <label class="form-field">
-                        <input class="hero-form__input" type="text" name="name" placeholder="" >
+                        <input  class="hero-form__input" type="text" name="name" placeholder="" >
                         <span class="placeholder">Введіть ваше ім’я</span>
                     </label>
                     <label class="form-field">
-                        <input class="hero-form__input" type="email" name="email" placeholder="" >
+                        <input  class="hero-form__input" type="email" name="email" placeholder="" >
                         <span class="placeholder">Введіть ваш email</span>
                     </label>
-                    <label class="form-field">
-                        <input class="hero-form__input " type="tel" name="phone" placeholder="" >
-                        <span class="placeholder">
-                            <img src="./images/img/flag.png" alt="">
-                            Введіть ваш номер телефону</span>
+                    <label class="form-field input-phone">
+                        <input  class="hero-form__input" type="tel" name="phone" placeholder=" " />
+                        <span class="placeholder placeholder--phone">Введіть ваш номер телефону</span>              
                     </label>
                     <button type="submit" class="hero-form__button">Взяти участь</button>
                 </form>
                 <div class="form__decor2">
-                    <img src="./images/form__decor1.svg" alt="">
+                    <img src="./images/form__decor1.svg" alt="igure with abstract decorative element">
                 </div>
             </div>
         </section>
@@ -79,55 +80,55 @@
             <div class="logos-slider">
                 <div class="logos-slider__slide">
                     <a class="logos__item" href="https://vctr.media/ua/velika-dobirka-bezoplatnih-kursiv-u-kreativnij-ekonomiczi-138363/" target="_blank">
-                        <img src="./images/img/vector.svg" alt="Vector Media" loading="lazy" />
+                        <img src="./images/img/vector.svg" alt="Trademark logo Vector Media" loading="lazy" />
                     </a>
                 </div>
                 <div class="logos-slider__slide">
                     <a class="logos__item" href="https://news.finance.ua/ua/10-bezkoshtovnyh-kursiv-dlya-osvoyennya-novyh-profesiy-ta-vyvchennya-mov" target="_blank">
-                    <img src="./images/img/finance.svg" alt="Finance.ua" loading="lazy" />
+                    <img src="./images/img/finance.svg" alt="Trademark logo Finance.ua" loading="lazy" />
                     </a>
                 </div>
                 <div class="logos-slider__slide">
                     <a class="logos__item" href="https://mc.today/nachat-vse-zanovo-7-platform-s-kursami-gde-ukraintsy-mogut-uchitsya-besplatno/" target="_blank">
-                    <img src="./images/img/mctoday.svg" alt="Media Sapiens" loading="lazy" />
+                    <img src="./images/img/mctoday.svg" alt="Trademark logo Media Sapiens" loading="lazy" />
                     </a>
                 </div>
                 <div class="logos-slider__slide">
                     <a class="logos__item" href="https://ain.ua/ru/2016/04/14/pervoe-v-sng-soobshhestvo-internet-predprinimatelej-genius-marketing/" target="_blank">
-                    <img src="./images/img/ain.svg" alt="Na chasi" loading="lazy" />
+                    <img src="./images/img/ain.svg" alt="Trademark logo Na chasi" loading="lazy" />
                     </a>
                 </div>
                 <div class="logos-slider__slide">
                     <a class="logos__item" href="https://forbes.ua/lifestyle/it-dizayn-chi-marketing-gid-navchalnimi-platformami-shkolami-ta-agregatorami-shcho-dopomozhut-opanuvati-novu-profesiyu-29062022-6890" target="_blank">
-                    <img src="./images/img/forbes.svg" alt="Bazilik Media" loading="lazy" />
+                    <img src="./images/img/forbes.svg" alt="Trademark logo Bazilik Media" loading="lazy" />
                     </a>
                 </div>
                 <div class="logos-slider__slide">
                     <a class="logos__item"
                         href="https://ukrainer.net/servisy-dlia-ua/"
                         target="_blank">
-                        <img src="./images/img/ukrainer.svg" alt="Bazilik Media" loading="lazy" />
+                        <img src="./images/img/ukrainer.svg" alt="Trademark logo Bazilik Media" loading="lazy" />
                     </a>
                 </div>
                 <div class="logos-slider__slide">
                     <a class="logos__item"
                         href="https://mc.today/nachat-vse-zanovo-7-platform-s-kursami-gde-ukraintsy-mogut-uchitsya-besplatno/"
                         target="_blank">
-                        <img src="./images/img/today.svg" alt="Bazilik Media" loading="lazy" />
+                        <img src="./images/img/today.svg" alt="Trademark logo Bazilik Media" loading="lazy" />
                     </a>
                 </div>
                 <div class="logos-slider__slide">
                     <a class="logos__item"
                         href="https://hub.kyivstar.ua/news/dobirka-korysnyh-bezkoshtovnyh-kursiv-ta-biznes-podkastiv/"
                         target="_blank">
-                        <img src="./images/img/kyivstarhub.png" alt="Bazilik Media" loading="lazy" />
+                        <img src="./images/img/kyivstarhub.png" alt="Trademark logo Bazilik Media" loading="lazy" />
                     </a>
                 </div>
                 <div class="logos-slider__slide">
                     <a class="logos__item"
                         href="https://vogue.ua/ua/article/culture/lifestyle/velika-dobirka-bezkoshtovnih-kursiv-dlya-ukrajinciv.html"
                         target="_blank">
-                        <img src="./images/img/vogue.png" alt="Bazilik Media" loading="lazy" />
+                        <img src="./images/img/vogue.png" alt="Trademark logo Bazilik Media" loading="lazy" />
                     </a>
                 </div>
             </div>
@@ -181,7 +182,7 @@
                 <button class="questions__button scroll-to-form">Взяти участь</button>
             </div>
             <div class="questions__title-image">
-                <img src="./images/bg-img.png" alt="">
+                <img src="./images/bg-img.png" alt="igure with abstract decorative element">
             </div>
         </section>
 
@@ -189,11 +190,11 @@
             <h2 class="trainer__title">ХТО БУДЕ <span>ПРОВОДИТИ</span> </h2>
             <div class="wrapper">
                 <div class="trainer__decor1">
-                    <img src="./images/speaker__decor1.svg" alt="">
+                    <img src="./images/speaker__decor1.svg" alt="igure with abstract decorative element">
                 </div>
                 <div class="trainer__block">
                     <div class="trainer__block-images">
-                        <img src="./images/speaker.jpg" alt="" class="trainer__block-img">
+                        <img src="./images/speaker.jpg" alt="photo of the trainer" class="trainer__block-img">
                     </div>
                     <div class="trainer__block-data">
                         <h3 class="block__data-name">Артемьєв Арсеній</h3>
@@ -207,7 +208,7 @@
                     </div>
                 </div>
                 <div class="trainer__decor2">
-                    <img src="./images/speaker__decor2.svg" alt="">
+                    <img src="./images/speaker__decor2.svg" alt="igure with abstract decorative element">
                 </div>
             </div>
         </section>
@@ -220,13 +221,13 @@
             </div>
             <div class="answers__images-block">
                 <div class="answers__images-imgage">
-                    <img src="./images/description__img.png" alt="" class="decor-img">
+                    <img src="./images/description__img.png" alt="image of a clerk and office supplies" class="decor-img">
                 </div>
                 <div class="answers__images-decor1">
-                    <img src="./images/iconRunningLine.svg" alt="" >
+                    <img src="./images/iconRunningLine.svg" alt="image of a four-pointed star" >
                 </div>
                 <div class="answers__images-decor2">
-                    <img src="./images/iconRunningLine.svg" alt="" >
+                    <img src="./images/iconRunningLine.svg" alt="image of a four-pointed star" >
                 </div>
             </div>
         </section>
@@ -236,38 +237,38 @@
         <div class="footer__top container">
             <div class="footer__top-general">
                 <div class="top__general-logo">
-                    <img src="./images/logo-footer.svg" alt="">
+                    <img src="./images/logo-footer.svg" alt="logo Genius Space">
                 </div>
                 <p class="top__general-text">ТОВ "ДЖИНІУС.СПЕЙС", ЄДРПОУ: 42182763.</p>
                 <ul class="top__general-networks">
                     <li class="general__networks-item">
-                        <a href="" class="general__networks-linck">
-                            <img src="./images/logo/facebook.svg" alt="">
+                        <a href="#" class="general__networks-linck">
+                            <img src="./images/logo/facebook.svg" alt="social network logo facebook">
                         </a>
                     </li>
                     <li class="general__networks-item">
-                        <a href="" class="general__networks-linck">
-                            <img src="./images/logo/youtube.svg" alt="">
+                        <a href="#" class="general__networks-linck">
+                            <img src="./images/logo/youtube.svg" alt="social network logo youtube">
                         </a>
                     </li>
                     <li class="general__networks-item">
-                        <a href="" class="general__networks-linck">
-                            <img src="./images/logo/telegram.svg" alt="">
+                        <a href="#" class="general__networks-linck">
+                            <img src="./images/logo/telegram.svg" alt="social network logo telegram">
                         </a>
                     </li>
                     <li class="general__networks-item">
-                        <a href="" class="general__networks-linck">
-                            <img src="./images/logo/nstagram.svg" alt="">
+                        <a href="#" class="general__networks-linck">
+                            <img src="./images/logo/nstagram.svg" alt="social network logo instagram">
                         </a>
                     </li>
                     <li class="general__networks-item">
-                        <a href="" class="general__networks-linck">
-                            <img src="./images/logo/tiktok.svg" alt="">
+                        <a href="#" class="general__networks-linck">
+                            <img src="./images/logo/tiktok.svg" alt="social network logo tiktok">
                         </a>
                     </li>
                     <li class="general__networks-item">
-                        <a href="" class="general__networks-linck">
-                            <img src="./images/logo/link.svg" alt="">
+                        <a href="#" class="general__networks-linck">
+                            <img src="./images/logo/link.svg" alt="social network logo link">
                         </a>
                     </li>
                 </ul>
@@ -310,11 +311,11 @@
                 <h4 class="contacts__title">Контакти</h4>
                 <ul class="top__contacts-lists">
                     <li class="top__contacts-item">
-                        <img src="./images//logo/telega.svg" alt="">
+                        <img src="./images//logo/telega.svg" alt="logo telegram">
                         Telegram: <a href="#">genius_support_bot</a>
                     </li>
                     <li class="top__contacts-item">
-                        <img src="./images//logo/mail.svg" alt="">
+                        <img src="./images//logo/mail.svg" alt="logo mail">
                         <a href="#">info@genius.space</a> 
                     </li>
                 </ul>
@@ -326,22 +327,22 @@
             </p> 
             <ul class="footer__bottom-lists">
                 <li class="footer__bootom-list">
-                    <a href="" class="footer__bottom-linck">Умови надання послуг</a>
+                    <a href="#" class="footer__bottom-linck">Умови надання послуг</a>
                 </li>
                 <li class="footer__bootom-list">
-                    <a href="" class="footer__bottom-linck">Політика конфіденційності</a>
+                    <a href="#" class="footer__bottom-linck">Політика конфіденційності</a>
                 </li>
                 <li class="footer__bootom-list">
-                    <a href="" class="footer__bottom-linck">Умови повернення</a>
+                    <a href="#" class="footer__bottom-linck">Умови повернення</a>
                 </li>
                 <li class="footer__bootom-list">
-                    <a href="" class="footer__bottom-linck">Умови передзамовлення послуг</a>
+                    <a href="#" class="footer__bottom-linck">Умови передзамовлення послуг</a>
                 </li>
                 <li class="footer__bootom-list">
-                    <a href="" class="footer__bottom-linck">Постачальники послуг</a>
+                    <a href="#" class="footer__bottom-linck">Постачальники послуг</a>
                 </li>
                 <li class="footer__bootom-list">
-                    <a href="" class="footer__bottom-linck">Попередження</a>
+                    <a href="#" class="footer__bottom-linck">Попередження</a>
                 </li>
             </ul>
         </div>
