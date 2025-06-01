@@ -5,6 +5,13 @@ newDate.setDate(newDate.getDate() + 1);
     'липня', 'серпня', 'вересня', 'жовтня', 'листопада', 'грудня'
     ];
     $('#current-date').text(`${newDate.getDate()} ${month[newDate.getMonth()]}`);
+    
+    $('.scroll-to-form').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('.hero-form').offset().top
+        }, 800); 
+    });
 
 function validateFormFields(form) {
     let isValid = true;
