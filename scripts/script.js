@@ -68,12 +68,26 @@ phoneInputs.forEach((input) => {
 
     input.addEventListener('focus', () => {
         placeholder.classList.add('active');
+        setTimeout(() => {
+            const dropdown = document.querySelector(".iti__country-list");
+            if (dropdown) {
+                dropdown.scrollTop = 0;
+
+                dropdown.querySelectorAll("li").forEach((li) => {
+                const text = li.textContent?.trim();
+                if (!text) {
+                    li.style.display = "none";
+                }
+                });
+            }
+        }, 100);
     });
 
     input.addEventListener('blur', () => {
         if (!input.value) {
         placeholder.classList.remove('active');
         }
+
     });
 
     if (input.type === 'tel') {
